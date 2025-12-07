@@ -386,7 +386,7 @@ $('#addStudentForm').submit(function(e){
     else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.val().trim())){ $('#email-error').text("Invalid email format."); valid=false;}
     if(!valid) return;
 
-    //Ajouter du contenu HTML
+    
     const newRow = `<tr>
         <td>${studentID.val()}</td>
         <td>${lastname.val()}</td>
@@ -432,7 +432,7 @@ $('#showReportBtn').click(function(){
     });
 });
 
-// Row Hover & Click et 
+// Row Hover & Click 
 $('#attendanceTable tbody').on('mouseenter','tr',function(){ $(this).addClass('highlight-row'); });
 $('#attendanceTable tbody').on('mouseleave','tr',function(){ $(this).removeClass('highlight-row'); });
 $('#attendanceTable tbody').on('click','tr',function(){
@@ -462,7 +462,7 @@ $('#resetBtn').click(function(){
     });
 });
 
-//bar de recherche pour afficher ou cacher
+
 $("#searchInput").on("keyup", function () {
     let value = $(this).val().toLowerCase();
 
@@ -473,7 +473,7 @@ $("#searchInput").on("keyup", function () {
     });
 });
 
-//
+
 
 function updateSortStatus(text){
     $("#sortStatus").text(text);
